@@ -51,11 +51,23 @@ class AvatarActualizar(UpdateView):
     model = Avatar
     fields = ['imagen']
     success_url = reverse_lazy('mvlcblog-listar')
+    def get_object(self):
+        return Avatar.objects.get(user=self.request.user)
 
 class UserActualizar(UpdateView):
     model = User
     fields = ['first_name','last_name', 'email' ]
     success_url = reverse_lazy('mvlcblog-listar')
+
+    def get_object(self, *args, **kwargs):
+        # Obtener el objeto de la base de datos
+        object = super(UserActualizar, self).get_object(*args, **kwargs)
+        # Comprobar si el usuario logueado es el mismo que el usuario que se está intentando modificar
+        if self.request.user != object:
+            # Si no es el mismo usuario, lanzar una excepción 403 (Forbidden)
+            raise PermissionDenied()
+        # Si es el mismo usuario, devolver el objeto
+        return object
 
 class MensajeDetalle(DetailView):
     model = Mensaje
