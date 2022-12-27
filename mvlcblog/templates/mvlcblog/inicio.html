@@ -1,0 +1,36 @@
+{% extends "mvlcblog/base.html" %}
+{% load static %}
+{% block contenido %}
+
+<div class="container px-4 px-lg-5">
+{% if posts %}   
+<div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+        <!-- Post preview-->
+        <div class="post-preview">
+            {% for post in posts|slice:":5" %}
+            <div class="post-preview">
+                {% if post.imagen %}
+                    <a href="{% url 'mvlcblog-detalle' post.id %}"><img class="img-thumbnail mx-auto d-block" 
+                        src="{{post.imagen.url}}" alt="{{post.titulo}}" style="max-width:500px;max-height:500px"/></a>
+                {% else %}
+                    <a href="{% url 'mvlcblog-detalle' post.id %}"><img class="img-thumbnail mx-auto d-block" 
+                        src="{% static 'media/posts/default_image.jpg' %}" alt="{{post.titulo}}" style="max-width:350px;max-height:350px" /></a>
+                {% endif %}
+                <h2 class="post-title text-center"><a href="{% url 'mvlcblog-detalle' post.id %}">{{post.titulo}}</a></h2>
+                <h3 class="post-subtitle text-center">{{post.sub_titulo}}</h3>
+                <p class="post-meta">
+                    Publicado por
+                    <a href="#!">@mvlc_trading</a>
+                    {{post.publicado_el}}
+                </p>
+            </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+</div>
+{% endblock %}

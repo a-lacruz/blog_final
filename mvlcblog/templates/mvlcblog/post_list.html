@@ -1,0 +1,26 @@
+{% extends "mvlcblog/base.html" %}
+
+{% block contenido %}
+{% if user.is_superuser %}
+<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='{% url 'mvlcblog-crear' %}'">Crear Post</button>
+<button type="button" class="btn btn-info btn-sm" onclick="window.location.href='{% url 'mvlcblog-mensajes-listar' %}'">Mensajes</button>
+{% endif %}
+
+{% if user.is_authenticated %}
+<button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='{% url 'mvlcblog-users-actualizar' user.id %}'">Actualizar Perfil</button>
+<button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='{% url 'mvlcblog-avatars-actualizar' user.id %}'">Actualizar Avatar</button>
+{% endif %}
+
+<ul>
+{% for post in object_list %}
+    <li>
+        {{post.publicado_el}} - - {{post.titulo}}
+        {% if user.is_superuser %}
+        <button type="button" class="btn btn-danger btn-sm"  onclick="window.location.href='{% url 'mvlcblog-borrar' post.id %}'">Borrar</button>
+        <button type="button" class="btn btn-warning btn-sm" onclick="window.location.href='{% url 'mvlcblog-actualizar' post.id %}'">Actualizar</button>
+        {% endif %}
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='{% url 'mvlcblog-detalle' post.id %}'">Ver</button>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
