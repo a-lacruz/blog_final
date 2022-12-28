@@ -1,11 +1,24 @@
 {% extends "mvlcblog/base.html" %}
 
 {% block contenido %}
-<form method="POST">
+
+<h3 class="text-center mb-5">Envíanos un Mensaje</h3>
+<form method="POST" class="container mt-5">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Enviar">
+    <div class="form-group text-center mt-5">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a href="{% url 'mvlcblog-listar' %}" class="btn btn-secondary">Cancelar</a>
+    </div>
 </form>
 
+{% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }}">
+      {{ message }}
+  </div>
+  {% endfor %}
+{% endif %}
+
+
 {% endblock %}
-    

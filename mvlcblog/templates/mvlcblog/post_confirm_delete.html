@@ -1,10 +1,14 @@
 {% extends 'mvlcblog/base.html' %}
 
 {% block contenido %}
-<h3>Confirma que quiere borrar el post?? {{object.titulo}}</h3>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="SI">
-</form>
+
+<div class="mx-auto" style="max-width: 600px;">
+    <h2 class="text-center">¿Estás seguro de querer eliminar el post <em>{{ object.titulo }}</em>?</h2>
+    <form method="POST" class="mx-auto text-center">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-danger mr-3">Sí</button>
+        <a href="{% url 'mvlcblog-listar' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
 {% endblock %}

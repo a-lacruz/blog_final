@@ -1,23 +1,22 @@
+mejoremos visualmente el template "mensaje_detail.html"
+
 {% extends 'mvlcblog/base.html' %}
 
-
 {% block contenido %}
-    <div>
-        De: {{object.nombre}}
-    </div>
-    <div>
-        Email contacto: {{object.email}}
-    </div>
-    <div>
-        <p>
-            Mensaje:
-            <br> 
-            {{object.texto}}
-        </p>
-    </div>
-    <div>
-        Enviado el: {{object.enviado_el}}
-    </div>
-    <br>
-    <a href="{% url 'mvlcblog-mensajes-listar' %}">Lista de Mensajes</a>
+<div class="card mx-auto" style="width: 42rem;">
+<div class="card-body">
+<h4 class="card-title">De: {{object.nombre}}</h4>
+<h5 class="card-subtitle mb-2 text-muted">Contacto: {{object.email}}</h5>
+<p class="card-text">
+Mensaje:
+<br>
+{{object.texto}}
+</p>
+<p class="card-text">
+Enviado el: {{object.enviado_el}}
+</p>
+<br>
+<a href="{% url 'mvlcblog-mensajes-listar' %}" class="btn btn-secondary">Lista de Mensajes</a>
+</div>
+</div>
 {% endblock %}

@@ -1,12 +1,15 @@
 {% extends "mvlcblog/base.html" %}
 
 {% block contenido %}
-<ul>
+
+<ul class="list-group">
 {% for mensaje in object_list %}
-    <li>
-        {{mensaje.enviado_el}} - - {{mensaje.email}} -- {{mensaje.nombre}} 
-        <a href="{% url 'mvlcblog-mensajes-borrar' mensaje.id %}">Borrar</a>
-        <a href="{% url 'mvlcblog-mensajes-detalle' mensaje.id %}">Ver</a>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{mensaje.enviado_el}} - - {{mensaje.email}} -- {{mensaje.nombre}}
+        <div>
+            <a class="btn btn-sm btn-outline-danger" href="{% url 'mvlcblog-mensajes-borrar' mensaje.id %}">Borrar</a>
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'mvlcblog-mensajes-detalle' mensaje.id %}">Ver</a>
+        </div>
     </li>
 {% endfor %}
 </ul>

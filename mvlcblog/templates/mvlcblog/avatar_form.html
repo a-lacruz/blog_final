@@ -1,8 +1,15 @@
 {% extends "mvlcblog/base.html" %}
 {% block contenido %}
-<form enctype="multipart/form-data" method="POST">
+
+<form enctype="multipart/form-data" method="POST" class="form-horizontal container">
+    <h3 class="text-center">Actualizar Avatar</h3>
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Actualizar">
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary btn-lg">Actualizar</button>
+            <a href="{% url 'mvlcblog-listar' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
 </form>
 {% endblock %}

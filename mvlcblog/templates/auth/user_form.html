@@ -1,8 +1,17 @@
 {% extends "mvlcblog/base.html" %}
 {% block contenido %}
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Actualizar">
-</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3>Actualizar Informacion de Usuario</h3>
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Actualizar" class="btn btn-primary">
+                <a href="{% url 'mvlcblog-listar' %}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

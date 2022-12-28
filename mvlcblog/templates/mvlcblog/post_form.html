@@ -1,12 +1,18 @@
 {% extends "mvlcblog/base.html" %}
 
 {% block contenido %}
-<form enctype="multipart/form-data" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Postear">
-</form>
 
+<div class="mx-auto">
+    <h3 class="text-center">Crear Nuevo Post</h3>
+    <form enctype="multipart/form-data" method="POST" class="mx-auto" style="max-width: 700px;">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Postear</button>
+                <a href="{% url 'mvlcblog-listar' %}" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </div>
+    </form>
+</div>
 {% endblock %}
-    
-
