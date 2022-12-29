@@ -32,13 +32,19 @@ lo siguiente dependiendo del tipo de usuario:
 ##### Usuario Anonimo
     - Ver entradas del Blog disponibles (Post)
 #### CREAR POST:
-Permite crear un nuevo post que contenga los siguientes elementos:
+(Registo requerido; Solo disponible para usuarios staff)
+Permite CREAR un nuevo post que contenga los siguientes elementos:
 
     - Titulo
     - Subtitulo
     - Imagen (Max 700px)
     - Texto (texto hasta 4000 caracteres)
-
+#### BORRAR POST:
+(Registo requerido; Solo disponible para usuarios staff)
+Permite BORRAR cualquiera entrada seleccionada de la base de datos (Post)
+#### ACTUALIZAR POST:
+(Registo requerido; Solo disponible para usuarios staff)
+Permite ACTUALIZAR el contenido de cualquier entrada seleccionada de la base de datos (Post)
 
 
 
