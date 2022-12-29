@@ -58,10 +58,10 @@ Permite a un usuario registrado salir la aplicacion.
 #### CAMBIO DE AVATAR:
 Permite a un usuario registrado cambiar SOLO su avatar; la asignacion inicial de avatares debe hacerse por el menu administracion
 #### ACTUALIZACION DE PERFIL USUARIO:
-Permite a un usuario registrado actualizar los datos de su perfil; dispone de los siguientes campos:
+Permite a un usuario registrado actualizar SOLO los datos de su perfil; dispone de los siguientes campos:
 
     - Nombre 
-    - apellido
+    - Apellido
     - E-mail
 #### DETALLES DE MENSAJES:
 (Registo requerido; Solo disponible para usuarios staff)
@@ -81,6 +81,47 @@ Al enviarse de manera correcta; muestra un mensaje en la pantalla.
 #### BORRAR MENSAJES:
 (Registo requerido; Solo disponible para usuarios staff)
 Permite BORRAR cualquier mensaje de contacto seleccionado de la base de datos.
+#### Pasos para clonar el proyecto desde Github
+Revisa la version de python; este proyecto fue escrito con python 3.11.0, es recomendable que uses la misma version o una superior para evitar problemas de compatibilidades.
+
+Para revisar tu version de python debes desde una terminal, colocar el siguiente comando:
+`python --version`
+`Python 3.11.0`
+Clona el repositorio en tu máquina local utilizando Git. Abre una terminal y escribe:
+
+`git clone https://github.com/usuario/repositorio.git`
+
+Accede al directorio del repositorio clonado:
+
+`cd repositorio`
+
+Asegúrate de tener instalado Django en tu máquina. Si aún no lo tienes instalado, puedes hacerlo ejecutando:
+
+`pip install django`
+
+Crea un entorno virtual para el proyecto. Esto te permitirá tener un espacio aislado para instalar las dependencias necesarias para el proyecto y evitar conflictos con otras aplicaciones. Para crear un entorno virtual con Python, puedes utilizar el siguiente comando:
+
+`python -m venv nombre_entorno`
+
+Activa el entorno virtual:
+##### En Windows
+`nombre_entorno\Scripts\activate.bat`
+##### En Linux o macOS
+`source nombre_entorno/bin/activate`
+
+Crea la base de datos y ejecuta las migraciones necesarias para crear las tablas y relaciones necesarias para el proyecto:
+
+`python manage.py makemigrations`
+`python manage.py migrate`
+
+Arranca el servidor de desarrollo con el siguiente comando:
+
+`python manage.py runserver`
+
+Ahora podrás acceder al proyecto Django desde tu navegador web en la dirección 
+
+`<link>`http://127.0.0.1:8000/.
+
 
 ###### superusers
 - admin/admin
