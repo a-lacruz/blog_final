@@ -45,7 +45,19 @@ Permite BORRAR cualquiera entrada seleccionada de la base de datos (Post)
 #### ACTUALIZAR POST:
 (Registo requerido; Solo disponible para usuarios staff)
 Permite ACTUALIZAR el contenido de cualquier entrada seleccionada de la base de datos (Post)
+#### REGISTRO DE USUARIO:
+Permite registrar a un nuevo usuario; dispone de los siguientes campos:
 
+    - Nombre de Usuario
+    - Contraseña
+    - Confirmacion de Contraseña
+#### LOGIN DE USUARIO:
+Permite a un usuario previamente registrado ingresar a la aplicacion.
+#### LOGOUT DE USUARIO:
+Permite a un usuario registrado salir la aplicacion.
+#### CAMBIO DE AVATAR:
+Permite a un usuario registrado cambiar su avatar; la asignacion inicial de avatares debe hacerse por el menu administracion
+    
 
 
 
