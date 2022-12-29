@@ -66,7 +66,7 @@ Permite a un usuario registrado actualizar SOLO los datos de su perfil; dispone 
 #### DETALLES DE MENSAJES:
 (Registo requerido; Solo disponible para usuarios staff)
 Permite VER el detalle de los mensajes enviados por cualquier tipo de usuarios desde el formulario de "contacto".
-#### lISTA DE MENSAJES:
+#### LISTA DE MENSAJES:
 (Registo requerido; Solo disponible para usuarios staff)
 Permite ver la lista completa de mensajes disponibles en la base de datos, adicionalmente "BORRAR" cualquiera de estos.
 #### CREAR MENSAJES:
@@ -85,8 +85,10 @@ Permite BORRAR cualquier mensaje de contacto seleccionado de la base de datos.
 Revisa la version de python; este proyecto fue escrito con python 3.11.0, es recomendable que uses la misma version o una superior para evitar problemas de compatibilidades.
 
 Para revisar tu version de python debes desde una terminal, colocar el siguiente comando:
+
 `python --version`
 `Python 3.11.0`
+
 Clona el repositorio en tu máquina local utilizando Git. Abre una terminal y escribe:
 
 `git clone https://github.com/usuario/repositorio.git`
@@ -98,6 +100,10 @@ Accede al directorio del repositorio clonado:
 Asegúrate de tener instalado Django en tu máquina. Si aún no lo tienes instalado, puedes hacerlo ejecutando:
 
 `pip install django`
+
+Instala las dependencias; para esto es necesario que corras en la terminal de tu gestor el comando `pip install`, revisa que estes dentro de la carpeta del proyecto y puedas ver el archivo `requirements.txt`, posteriormente ejecuta al comando:
+
+`pip install -r requirements.txt`
 
 Crea un entorno virtual para el proyecto. Esto te permitirá tener un espacio aislado para instalar las dependencias necesarias para el proyecto y evitar conflictos con otras aplicaciones. Para crear un entorno virtual con Python, puedes utilizar el siguiente comando:
 
