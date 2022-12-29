@@ -64,7 +64,7 @@ class AvatarActualizar(UpdateView):
     
 class UserActualizar(UpdateView):
     model = User
-    fields = ['first_name','last_name', 'email' ]
+    fields = ['first_name','last_name', 'email']
     success_url = reverse_lazy('mvlcblog-listar')
     def get_object(self, *args, **kwargs):
         # Obtener el objeto de la base de datos
@@ -86,7 +86,7 @@ class MensajeCrear(SuccessMessageMixin, CreateView):
     model = Mensaje
     success_url = reverse_lazy("mvlcblog-mensajes-crear")
     fields = ['nombre', 'email', 'texto']
-    success_message = "Mensaje de contacto enviado!!"
+    success_message = "Mensaje enviado satisfactoriamente!!"
 
     def form_valid(self, form):
         response = super().form_valid(form)
