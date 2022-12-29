@@ -15,6 +15,7 @@ Algunas de las cosas que se pueden hacer:
 
 ##### Detalle de Post:
 Despliega un post de la base de datos mostrando lo siguiente:
+
     - Titulo
     - Subtitulo
     - Imagen (Max 700px)
