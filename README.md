@@ -56,10 +56,31 @@ Permite a un usuario previamente registrado ingresar a la aplicacion.
 #### LOGOUT DE USUARIO:
 Permite a un usuario registrado salir la aplicacion.
 #### CAMBIO DE AVATAR:
-Permite a un usuario registrado cambiar su avatar; la asignacion inicial de avatares debe hacerse por el menu administracion
-    
+Permite a un usuario registrado cambiar SOLO su avatar; la asignacion inicial de avatares debe hacerse por el menu administracion
+#### ACTUALIZACION DE PERFIL USUARIO:
+Permite a un usuario registrado actualizar los datos de su perfil; dispone de los siguientes campos:
 
+    - Nombre 
+    - apellido
+    - E-mail
+#### DETALLES DE MENSAJES:
+(Registo requerido; Solo disponible para usuarios staff)
+Permite VER el detalle de los mensajes enviados por cualquier tipo de usuarios desde el formulario de "contacto".
+#### lISTA DE MENSAJES:
+(Registo requerido; Solo disponible para usuarios staff)
+Permite ver la lista completa de mensajes disponibles en la base de datos, adicionalmente "BORRAR" cualquiera de estos.
+#### CREAR MENSAJES:
+Permite CREAR un nuevo mensaje a traves del formulario de contacto, que sera visible luego solo para usuarios staff; 
+tiene los siguientes elementos:
 
+    - Nombre
+    - E-Mail
+    - Texto 
+    - Texto (texto hasta 4000 caracteres)
+Al enviarse de manera correcta; muestra un mensaje en la pantalla.
+#### BORRAR MENSAJES:
+(Registo requerido; Solo disponible para usuarios staff)
+Permite BORRAR cualquier mensaje de contacto seleccionado de la base de datos.
 
 ###### superusers
 - admin/admin
