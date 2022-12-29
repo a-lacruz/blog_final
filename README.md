@@ -13,14 +13,10 @@ Algunas de las cosas que se pueden hacer:
 
 ### Funcionalidades por Vista
 
-##### Detalle de Post:
-Despliega un post de la base de datos mostrando lo siguiente:
+#### DETALLE DE POST:
+Despliega un post de la base de datos mostrando los elementos definidos en la vista "Crear Post"
 
-    - Titulo
-    - Subtitulo
-    - Imagen (Max 700px)
-    - Texto (texto hasta 4000 caracteres)
-##### Lista de Post:
+#### LISTA DE POST:
 Permite la carga de una lista de los post disponibles en la BD mostrando
 lo siguiente dependiendo del tipo de usuario:
 ##### Staff o SuperUser
@@ -29,12 +25,19 @@ lo siguiente dependiendo del tipo de usuario:
     - Actualizar Perfil del usuario logueado.
     - Actualizar Avatar de usuario logueado
     - Ver, Actualizar y Borrar entradas del Blog (Post)
-#### Usuario Registrado
+##### Usuario Registrado
     - Actualizar Perfil del usuario logueado. (Filtro que evita cambios a otos usuarios)
     - Cambiar Avatar de usuario logueado. (Filtro que evita cambios a otos usuarios)
     - Ver entradas del Blog disponibles (Post)
-#### Usuario Anonimo
+##### Usuario Anonimo
     - Ver entradas del Blog disponibles (Post)
+#### CREAR POST:
+Permite crear un nuevo post que contenga los siguientes elementos:
+
+    - Titulo
+    - Subtitulo
+    - Imagen (Max 700px)
+    - Texto (texto hasta 4000 caracteres)
 
 
 
