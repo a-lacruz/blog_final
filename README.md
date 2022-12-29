@@ -124,9 +124,9 @@ Arranca el servidor de desarrollo con el siguiente comando:
 
 `python manage.py runserver`
 
-Ahora podrás acceder al proyecto Django desde tu navegador web en la dirección 
+Ahora podrás acceder a la aplicacion desde tu navegador web en la siguiente dirección: 
 
-`<link>`http://127.0.0.1:8000/.
+`<link>` http://127.0.0.1:8000/mvlcblog
 
 
 ###### superusers
