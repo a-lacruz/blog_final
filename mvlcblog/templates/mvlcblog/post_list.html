@@ -7,19 +7,21 @@
 {% endif %}
 
 {% if user.is_authenticated %}
-<button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='{% url 'mvlcblog-users-actualizar' user.id %}'">Actualizar Perfil</button>
-<button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='{% url 'mvlcblog-avatars-actualizar' user.id %}'">Actualizar Avatar</button>
+<button type="button" class="btn btn-warning btn-sm" onclick="window.location.href='{% url 'mvlcblog-users-actualizar' user.id %}'">Actualizar Perfil</button>
+<button type="button" class="btn btn-warning btn-sm" onclick="window.location.href='{% url 'mvlcblog-avatars-actualizar' user.id %}'">Actualizar Avatar</button>
 {% endif %}
 
-<ul>
+<ul class="list-group">
 {% for post in object_list %}
-    <li>
-        {{post.publicado_el}} - - {{post.titulo}}
+    <li class="list-group-item d-flex justify-content-between align-items-end">
+        <div class="float-left">{{post.publicado_el}} - - {{post.titulo}}</div>
+        <div class="ml-auto">
         {% if user.is_superuser %}
         <button type="button" class="btn btn-danger btn-sm"  onclick="window.location.href='{% url 'mvlcblog-borrar' post.id %}'">Borrar</button>
         <button type="button" class="btn btn-warning btn-sm" onclick="window.location.href='{% url 'mvlcblog-actualizar' post.id %}'">Actualizar</button>
         {% endif %}
         <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='{% url 'mvlcblog-detalle' post.id %}'">Ver</button>
+        </div>
     </li>
 {% endfor %}
 </ul>

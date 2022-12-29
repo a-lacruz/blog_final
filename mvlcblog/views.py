@@ -62,7 +62,6 @@ class AvatarActualizar(UpdateView):
     # Si es el mismo usuario, devolver el objeto
         return avatar
     
-
 class UserActualizar(UpdateView):
     model = User
     fields = ['first_name','last_name', 'email' ]

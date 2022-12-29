@@ -1,24 +1,24 @@
-<link rel="stylesheet" 
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-crossorigin="anonymous">
 {% extends 'mvlcblog/base.html' %}
 
 {% block contenido %}
-<div class="container mt-5">
-<h2>Registro de Usuarios</h2>
-<form method="POST">
-{% csrf_token %}
-{% for field in form %}
-<div class="form-group">
-{{ field.label_tag }}
-{{ field }}
-</div>
-{% endfor %}
-<p class="text-muted">
-La contraseña debe tener al menos 8 caracteres y contener al menos un número y una letra mayúscula.
-</p>
-<button type="submit" class="btn btn-primary">Quiero Registrarme</button>
-</form>
+
+<div class="container-fluid mt-5">
+    <h2 class="text-center">Registro de Usuarios</h2>
+    <form method="POST" class="mx-auto w-50">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group mt-3">
+            {{ field.label_tag }}
+            {{ field }}
+        </div>
+        {% endfor %}
+        <p class="text-muted">
+            ***La contraseña debe tener al menos 8 caracteres y contener al menos un número y una letra mayúscula.***
+        </p>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Registrarme</button>
+            <a href="{% url 'mvlcblog-inicio' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
 </div>
 {% endblock %}
