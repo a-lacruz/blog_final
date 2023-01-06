@@ -128,6 +128,8 @@ Ahora podrás acceder a la aplicacion desde tu navegador web en la siguiente dir
 
 `<link>` http://127.0.0.1:8000/mvlcblog
 
+Puedes ver una demostracion de las funcionalidades en YouTube
+`<link>` https://youtu.be/TTZhCKCUi24
 
 ###### superusers
 - admin/admin
